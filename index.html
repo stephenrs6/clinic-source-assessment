@@ -11,7 +11,7 @@
             border-style: solid;
             border-width: 2px;
             border-color: silver;
-            width: 75%;
+            width: 60%;
         }
         p{
             margin: 0px;
@@ -46,8 +46,6 @@
         }
 
         .tophalf{
-            display: flex;
-            flex-direction: row;
             border-style: solid;
             border-width: 1px;
             border-color: silver;
@@ -59,13 +57,37 @@
         }
         .fam-comp{
             width: -webkit-fill-available;
+
         }
+
+        .parents{
+            display: flex;
+            background: #D2DFED;
+        }
+        .fam-comp-inner{
+            display: flex;
+        }
+
+        .flex-item-1{
+            flex: 1;
+        }
+        .flex-item-2{
+            flex: 2;
+            text-align: center;
+        }
+        .flex-item-3{
+            flex: 2 ;
+            text-align: center;
+
+        }
+
         .parents-marital-status{
             display: inline-block;
             margin-left: 5px;
             border-style: solid;
             border-width: 1px;
             border-color: silver;
+            width: 37%;
         }
 
         #number{
@@ -74,10 +96,20 @@
 
         #paragraph{
             width: 99%;
-            height: 20%;
+            height: 60px;
 
         }
-        
+
+        #left{
+            text-align: left;
+        }
+        .bold{
+            font-weight: bold;
+        }
+
+        #center{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -88,61 +120,88 @@
             <div class="tophalf">
                 <div class="fam-comp">
                     <p class="heading">Family Compostion</p>
-                    <p>Parents<select>
-                            <option value="father">Father</option>
-                        </select><select>
-                            <option value="mother">Mother</option>
-                        </select></p>
-                    <div class="fam-comp-inner">
-                        <p>Name<input type="text"><input type="text"></p>
-                        <p>Occupation<input type="text"><input type="text"></p>
-                        <p>Eduction<input type="text"><input type="text"></p>
-                        <p>General Health<input type="text"><input type="text"></p>
-                        <div class="siblings">
-                            <p>Name & Ages</p>
-                            <p>Siblings<input type="checkbox">None</p>
-                            <p># of brothers: <input id="number" type="number"><input type="text"></p>
-                            <p># of sisters: <input id="number" type="number"><input type="text"></p>
+                    <div class="parents">
+                        <div class="flex-item-1">
+                            <p class="heading" id="left">Parents</p>
+                        </div>
+                        <div class="flex-item-2">
+                            <select>
+                                <option value="father">Father</option>
+                            </select>
+                        </div>
 
+                        <div class="flex-item-3">
+                            <select>
+                                <option value="mother">Mother</option>
+                            </select>
                         </div>
-                        <div class="children">
-                            <p>Name & Ages</p>
-                            <p>Children<input type="checkbox">None</p>
-                            <p># of brothers: <input id="number" type="number"><input type="text"></p>
-                            <p># of sisters: <input id="number" type="number"><input type="text"></p>
+                    </div>
+                    <div class="fam-comp-inner">
+                        <div class="flex-item-1">
+                            <p>Name</p>
+                            <p>Occupation</p>
+                            <p>Education</p>
+                            <p>General Health</p>
                         </div>
+                        <div class="flex-item-2">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                        </div>
+                        <div class="flex-item-3">
+                                <input class="fam-comp-input" type="text">
+                                <input class="fam-comp-input" type="text">
+                                <input class="fam-comp-input" type="text">
+                                <input class="fam-comp-input" type="text">
+                        </div>
+                    </div>
+                    <div class="siblings">
+                        <p>Name & Ages</p>
+                        <p><b>Siblings</b><input type="checkbox">None</p>
+                        <p># of brothers: <input id="number" type="number"><input type="text"></p>
+                        <p># of sisters: <input id="number" type="number"><input type="text"></p>
+
+                    </div>
+                    <div class="children">
+                        <p>Name & Ages</p>
+                        <p><b>Children</b><input type="checkbox">None</p>
+                        <p># of brothers: <input id="number" type="number"><input type="text"></p>
+                        <p># of sisters: <input id="number" type="number"><input type="text"></p>
                     </div>
                 </div>
             </div>
-            <div class="parents-marital-status">
-                <p class="heading">Parent's Marital Status</p>
-                <p><input type="checkbox">Engaged <input id="number" type="number"></p>
-                <p><input type="checkbox">Married for <input id="number" type="number"> years</p>
-                <p><input type="checkbox">Divorced for <input id="number" type="number"> years</p>
-                <p><input type="checkbox">Seperated for <input id="number" type="number"> years</p>
-                <p><input type="checkbox">Divorce in process <input id="number" type="number"> months</p>
-                <p><input type="checkbox">Live-in for <input id="number" type="number"> years</p>
-                <p><input type="checkbox"><input id="number" type="number"> prior marriages (self)</p>
-                <p><input type="checkbox"><input id="number" type="number"> prior marriages (partner)</p>
-            </div>
-            <!-- <div class="bottomhalf">  -->
-                <input id="paragraph" type="text">
-                <p>Past or present relationship with family members</p>
-                <input id="paragraph" type="text">
-                <p>Stressors:
-                    <input type="checkbox">None reported
-                    <input type="checkbox">Illness
-                    <input type="checkbox">Death
-                    <input type="checkbox">Move
-                    <input type="checkbox">Seperation or Divorce
-                    <input type="checkbox">Military Deployment
-                    <input type="checkbox">Other
-                </p>
-                <input id="paragraph" type="text">
-                <p>Family history of Mental Health Issues/Substance Abuse/Other::<input type="checkbox">None reported</p>
-                <input id="paragraph" type="text">
-            <!-- </div> -->
         </div>
+        <div class="parents-marital-status">
+            <p class="heading bold" id="left">Parent's Marital Status</p>
+            <p><input type="checkbox">Engaged <input id="number" type="number"></p>
+            <p><input type="checkbox">Married for <input id="number" type="number"> years</p>
+            <p><input type="checkbox">Divorced for <input id="number" type="number"> years</p>
+            <p><input type="checkbox">Seperated for <input id="number" type="number"> years</p>
+            <p><input type="checkbox">Divorce in process <input id="number" type="number"> months</p>
+            <p><input type="checkbox">Live-in for <input id="number" type="number"> years</p>
+            <p><input type="checkbox"><input id="number" type="number"> prior marriages (self)</p>
+            <p><input type="checkbox"><input id="number" type="number"> prior marriages (partner)</p>
+        </div>
+        <!-- <div class="bottomhalf">  -->
+        <textarea id="paragraph" wrap="hard"></textarea>
+        <p class="bold">Past or present relationship with family members</p>
+        <textarea id="paragraph" wrap="hard"></textarea>
+        <p><b>Stressors:</b>
+            <input type="checkbox">None reported
+            <input type="checkbox">Illness
+            <input type="checkbox">Death
+            <input type="checkbox">Move
+            <input type="checkbox">Seperation or Divorce
+            <input type="checkbox">Military Deployment
+            <input type="checkbox">Other
+        </p>
+        <textarea id="paragraph" wrap="hard"></textarea>
+        <p><b>Family history of Mental Health Issues/Substance Abuse/Other::</b><input type="checkbox">None
+            reported</p>
+        <textarea id="paragraph" wrap="hard"></textarea>
+        <!-- </div> -->
+    </div>
 
 
     </div>
