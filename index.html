@@ -32,16 +32,16 @@
             border-right-width: 0px;
             border-color: silver;
         }
-        /* .inner-content{
-            border-style: solid;
-            border-width: 1px;
-            border-color: silver;
-            width: 100%;
-        } */
         
         .heading{
             text-align: center;
             font-weight: bold;
+            background: #D2DFED;
+        }
+        
+        .sub-heading{
+            display: flex;
+            text-align: center;
             background: #D2DFED;
         }
 
@@ -55,12 +55,11 @@
         .bottomhalf{
             display: inline-block;
         }
-        .fam-comp{
-            width: -webkit-fill-available;
-        }
+
         .fam-comp-input{
-            width: 90%;
+            width: 95%;
         }
+    
         .parents{
             display: flex;
             background: #D2DFED;
@@ -77,10 +76,18 @@
             text-align: center;
         }
         .flex-item-3{
-            flex: 2 ;
+            flex: 2;
             text-align: center;
-
         }
+        .flex-item-4{
+            flex: 3;
+            
+        }
+        .flex-item-5{
+            flex:7;
+            text-align: center;
+        }
+
 
         .parents-marital-status{
             display: inline-block;
@@ -92,12 +99,16 @@
         }
 
         #number{
-            width: 7%;
+            width: 10%;
+        }
+
+        #number-2{
+            width: 15%;
         }
 
         #paragraph{
             width: 99%;
-            height: 60px;
+            height: 50px;
 
         }
         .column-fix{
@@ -119,6 +130,15 @@
         #center{
             text-align: center;
         }
+        @media screen and (max-width: 992px) {
+            .flex-item-4 {
+                flex: 1;
+            }
+            .flex-item-5{
+                flex: 2;
+    
+            }
+}
     </style>
 </head>
 
@@ -127,60 +147,91 @@
         <p class="main-heading">FAMILY HISTORY</p>
         <div class="inner-content">
             <div class="tophalf">
-                <div class="fam-comp">
-                    <p class="heading">Family Compostion</p>
-                    <div class="parents">
-                        <div class="flex-item-1">
-                            <p class="heading" id="left">Parents</p>
-                        </div>
-                        <div class="flex-item-2">
-                            <select>
-                                <option value="father">Father</option>
-                            </select>
-                        </div>
 
-                        <div class="flex-item-3">
-                            <select>
-                                <option value="mother">Mother</option>
-                            </select>
+                <p class="heading">Family Compostion</p>
+                <div class="parents">
+                    <div class="flex-item-1">
+                        <p class="heading" id="left">Parents</p>
+                    </div>
+                    <div class="flex-item-2">
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                        </select>
+                    </div>
+                    <div class="flex-item-3">
+                        <select>
+                            <option value="mother">Mother</option>
+                            <option value="father">Father</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fam-comp-inner">
+                    <div class="flex-item-1 column-fix">
+                        <div class="col-fix">
+                            <p>Name</p>
                         </div>
+                        <div class="col-fix">
+                            <p>Occupation</p>
+                        </div>
+                        <div class="col-fix">
+                            <p>Education</p>
+                        </div>
+                        <div class="col-fix">
+                            <p>General Health</p>
+                        </div>
+                    </div>
+                    <div class="flex-item-2">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                    </div>
+                    <div class="flex-item-3">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                        <input class="fam-comp-input" type="text">
+                    </div>
+                </div>
+
+                <div class="siblings">
+                    <div class="sub-heading">
+                        <p class="flex-item-4" id="left"><b>Siblings</b><input type="checkbox">None</p>
+                        <p class="flex-item-5"><b>Name & Ages</b></p>
                     </div>
                     <div class="fam-comp-inner">
-                        <div class="flex-item-1 column-fix">
-                            <div class="col-fix"><p>Name</p></div>
-                            <div class="col-fix"><p>Occupation</p></div>
-                            <div class="col-fix"><p>Education</p></div>
-                            <div class="col-fix"><p>General Health</p></div>
+                        <div class="flex-item-4">
+                            <p># of brothers <input id="number-2" type="number"></p>
+                            <p># of sisters <input id="number-2" type="number"></p>
                         </div>
-                        <div class="flex-item-2">
-                            <input class="fam-comp-input" type="text">
-                            <input class="fam-comp-input" type="text">
-                            <input class="fam-comp-input" type="text">
-                            <input class="fam-comp-input" type="text">
-                        </div>
-                        <div class="flex-item-3">
-                            <input class="fam-comp-input" type="text">
-                            <input class="fam-comp-input" type="text">
+                        <div class="flex-item-5">
                             <input class="fam-comp-input" type="text">
                             <input class="fam-comp-input" type="text">
                         </div>
                     </div>
-                    <div class="siblings">
-                        <p>Name & Ages</p>
-                        <p><b>Siblings</b><input type="checkbox">None</p>
-                        <p># of brothers: <input id="number" type="number"><input type="text"></p>
-                        <p># of sisters: <input id="number" type="number"><input type="text"></p>
+                </div>
 
+                <div class="children">
+                    <div class="sub-heading">
+                        <p class="flex-item-4" id="left"><b>Siblings</b><input type="checkbox">None</p>
+                        <p class="flex-item-5"><b>Name & Ages</b></p>
                     </div>
-                    <div class="children">
-                        <p>Name & Ages</p>
-                        <p><b>Children</b><input type="checkbox">None</p>
-                        <p># of brothers: <input id="number" type="number"><input type="text"></p>
-                        <p># of sisters: <input id="number" type="number"><input type="text"></p>
+                    <div class="fam-comp-inner">
+                        <div class="flex-item-4">
+                            <p># of daughters <input id="number-2" type="number"></p>
+                            <p># of sons <input id="number-2" type="number"></p>
+                        </div>
+                        <div class="flex-item-5">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+
         <div class="parents-marital-status">
             <p class="heading bold" id="left">Parent's Marital Status</p>
             <p><input type="checkbox">Engaged <input id="number" type="number"></p>
@@ -192,7 +243,7 @@
             <p><input type="checkbox"><input id="number" type="number"> prior marriages (self)</p>
             <p><input type="checkbox"><input id="number" type="number"> prior marriages (partner)</p>
         </div>
-        <!-- <div class="bottomhalf">  -->
+
         <textarea id="paragraph" wrap="hard"></textarea>
         <p class="bold">Past or present relationship with family members</p>
         <textarea id="paragraph" wrap="hard"></textarea>
@@ -206,18 +257,9 @@
             <input type="checkbox">Other
         </p>
         <textarea id="paragraph" wrap="hard"></textarea>
-        <p><b>Family history of Mental Health Issues/Substance Abuse/Other::</b><input type="checkbox">None
+        <p><b>Family history of Mental Health Issues/Substance Abuse/Other:</b><input type="checkbox">None
             reported</p>
         <textarea id="paragraph" wrap="hard"></textarea>
-        <!-- </div> -->
-    </div>
-
-
-    </div>
-
-
-
-    </div>
     </div>
 </body>
 
