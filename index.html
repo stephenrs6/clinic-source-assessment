@@ -57,9 +57,10 @@
         }
         .fam-comp{
             width: -webkit-fill-available;
-
         }
-
+        .fam-comp-input{
+            width: 90%;
+        }
         .parents{
             display: flex;
             background: #D2DFED;
@@ -99,6 +100,14 @@
             height: 60px;
 
         }
+        .column-fix{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .col-fix{
+            flex:1;
+        }
 
         #left{
             text-align: left;
@@ -137,11 +146,11 @@
                         </div>
                     </div>
                     <div class="fam-comp-inner">
-                        <div class="flex-item-1">
-                            <p>Name</p>
-                            <p>Occupation</p>
-                            <p>Education</p>
-                            <p>General Health</p>
+                        <div class="flex-item-1 column-fix">
+                            <div class="col-fix"><p>Name</p></div>
+                            <div class="col-fix"><p>Occupation</p></div>
+                            <div class="col-fix"><p>Education</p></div>
+                            <div class="col-fix"><p>General Health</p></div>
                         </div>
                         <div class="flex-item-2">
                             <input class="fam-comp-input" type="text">
@@ -150,10 +159,10 @@
                             <input class="fam-comp-input" type="text">
                         </div>
                         <div class="flex-item-3">
-                                <input class="fam-comp-input" type="text">
-                                <input class="fam-comp-input" type="text">
-                                <input class="fam-comp-input" type="text">
-                                <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
+                            <input class="fam-comp-input" type="text">
                         </div>
                     </div>
                     <div class="siblings">
